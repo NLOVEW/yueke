@@ -1,6 +1,7 @@
 package com.yueke.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 课程
@@ -13,15 +14,25 @@ public class Course implements Serializable {
     private String coId;
     private Teacher teacher;
     private String name;
+    private Date time;
     private Integer grade;
     private Double price;
 
-    public void set(String coId, Teacher teacher, String name, Integer grade, Double price) {
+    public void set(String coId, Teacher teacher, String name, Date time, Integer grade, Double price) {
         this.coId = coId;
         this.teacher = teacher;
         this.name = name;
+        this.time = time;
         this.grade = grade;
         this.price = price;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
     }
 
     public String getCoId() {

@@ -19,9 +19,8 @@ public class CourseOrder implements Serializable {
     private Date time;
     private Double price;//实际交易价格
     private String message;
-    private Integer score;
 
-    public void set(String couId, Course course, Parents parents, Date teachTime, Date time, Double price, String message, Integer score) {
+    public void set(String couId, Course course, Parents parents, Date teachTime, Date time, Double price, String message) {
         this.couId = couId;
         this.course = course;
         this.parents = parents;
@@ -29,7 +28,6 @@ public class CourseOrder implements Serializable {
         this.time = time;
         this.price = price;
         this.message = message;
-        this.score = score;
     }
 
     public String getCouId() {
@@ -88,11 +86,4 @@ public class CourseOrder implements Serializable {
         this.message = message;
     }
 
-    public Integer getScore() {
-        return score;
-    }
-
-    public void setScore(Integer score) {
-        this.score = score;
-    }
 }

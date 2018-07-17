@@ -11,7 +11,8 @@ public class Class implements Serializable {
     /**
      * cid(数据库id) School Teacher city area(区域) time(上课时间) price(价格)
      * 		course(科目) grade(年级) personCount(在读人数	)
-     *
+     *score 评分
+     * credit 信誉分
      */
     private String cid;
     private School school;

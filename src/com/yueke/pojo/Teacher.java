@@ -12,27 +12,37 @@ public class Teacher implements Serializable {
      * credit(信誉积分) count(上课次数) vip(会员) level(等级)
      */
     private String tid;
-    private String mobliePhone;
+    private String mobilePhone;
     private String userName;
     private String password;
     private String city;
     private String area;
+    private Integer score;
     private Long credit;
     private Integer count;
     private Integer vip;
     private Integer level;
 
-    public void set(String tid, String mobliePhone, String userName, String password, String city, String area, Long credit, Integer count, Integer vip, Integer level) {
+    public void set(String tid, String mobilePhone, String userName, String password, String city, String area, Integer score, Long credit, Integer count, Integer vip, Integer level) {
         this.tid = tid;
-        this.mobliePhone = mobliePhone;
+        this.mobilePhone = mobilePhone;
         this.userName = userName;
         this.password = password;
         this.city = city;
         this.area = area;
+        this.score = score;
         this.credit = credit;
         this.count = count;
         this.vip = vip;
         this.level = level;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 
     public String getTid() {
@@ -43,12 +53,12 @@ public class Teacher implements Serializable {
         this.tid = tid;
     }
 
-    public String getMobliePhone() {
-        return mobliePhone;
+    public String getMobilePhone() {
+        return mobilePhone;
     }
 
-    public void setMobliePhone(String mobliePhone) {
-        this.mobliePhone = mobliePhone;
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
     }
 
     public String getUserName() {
