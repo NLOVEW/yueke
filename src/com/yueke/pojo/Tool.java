@@ -18,6 +18,15 @@ public class Tool implements Serializable {
     private Double price;
     private Date time;
 
+    public void set(String toId, String tName, String function, Integer level, Double price, Date time) {
+        this.toId = toId;
+        this.tName = tName;
+        this.function = function;
+        this.level = level;
+        this.price = price;
+        this.time = time;
+    }
+
     public String getToId() {
         return toId;
     }

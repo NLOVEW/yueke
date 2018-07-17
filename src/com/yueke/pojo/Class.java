@@ -25,6 +25,23 @@ public class Class implements Serializable {
     private Double price;
     private Integer personCount;//已有人数
     private Integer classSum;//可容纳人数
+    private Integer score;
+    private Integer credit;
+
+    public void set(String cid, School school, Teacher teacher, String city, String area, Date startTime, Date endTime, String course, String grade, Double price, Integer personCount, Integer classSum) {
+        this.cid = cid;
+        this.school = school;
+        this.teacher = teacher;
+        this.city = city;
+        this.area = area;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.course = course;
+        this.grade = grade;
+        this.price = price;
+        this.personCount = personCount;
+        this.classSum = classSum;
+    }
 
     public Integer getClassSum() {
         return classSum;
@@ -120,5 +137,21 @@ public class Class implements Serializable {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
+    public Integer getCredit() {
+        return credit;
+    }
+
+    public void setCredit(Integer credit) {
+        this.credit = credit;
     }
 }

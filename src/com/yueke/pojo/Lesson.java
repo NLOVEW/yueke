@@ -22,6 +22,18 @@ public class Lesson implements Serializable {
     private Integer backCourse;
     private CourseOrder order;
 
+    public void set(String lid, Course course, Parents parents, Integer passCourse, Integer subCourse, HomeWork homeWork, Leave leave, Integer backCourse, CourseOrder order) {
+        this.lid = lid;
+        this.course = course;
+        this.parents = parents;
+        this.passCourse = passCourse;
+        this.subCourse = subCourse;
+        this.homeWork = homeWork;
+        this.leave = leave;
+        this.backCourse = backCourse;
+        this.order = order;
+    }
+
     public String getLid() {
         return lid;
     }

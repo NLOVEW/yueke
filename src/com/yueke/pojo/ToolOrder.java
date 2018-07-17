@@ -16,6 +16,14 @@ public class ToolOrder<T> implements Serializable {
     private Double price;
     private String comment;
 
+    public void set(String tlId, T object, Date time, Double price, String comment) {
+        this.tlId = tlId;
+        this.object = object;
+        this.time = time;
+        this.price = price;
+        this.comment = comment;
+    }
+
     public String getTlId() {
         return tlId;
     }

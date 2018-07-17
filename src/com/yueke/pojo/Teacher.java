@@ -22,6 +22,19 @@ public class Teacher implements Serializable {
     private Integer vip;
     private Integer level;
 
+    public void set(String tid, String mobliePhone, String userName, String password, String city, String area, Long credit, Integer count, Integer vip, Integer level) {
+        this.tid = tid;
+        this.mobliePhone = mobliePhone;
+        this.userName = userName;
+        this.password = password;
+        this.city = city;
+        this.area = area;
+        this.credit = credit;
+        this.count = count;
+        this.vip = vip;
+        this.level = level;
+    }
+
     public String getTid() {
         return tid;
     }

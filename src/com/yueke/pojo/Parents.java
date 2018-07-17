@@ -21,6 +21,16 @@ public class Parents implements Serializable {
     private Integer level;
     private Date time;
 
+    public void set(String pid, String mobilePhone, String userName, String password, Integer vip, Integer level, Date time) {
+        this.pid = pid;
+        this.mobilePhone = mobilePhone;
+        this.userName = userName;
+        this.password = password;
+        this.vip = vip;
+        this.level = level;
+        this.time = time;
+    }
+
     public String getPid() {
         return pid;
     }

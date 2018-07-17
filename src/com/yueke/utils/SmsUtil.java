@@ -21,7 +21,7 @@ public class SmsUtil {
      * @param templateCode      短信模板（阿里大于短信控制台可查）
      * @param phoneNumber       目标号码
      */
-    public static int sendCode(String accessKeyId,String accessKeySecret,String signName,String templateCode,String phoneNumber) throws Exception {
+    public static String  sendCode(String accessKeyId,String accessKeySecret,String signName,String templateCode,String phoneNumber) throws Exception {
         // 初始化ascClient需要的几个参数，固定值
         final String product = "Dysmsapi";
         final String domain = "dysmsapi.aliyuncs.com";
@@ -51,6 +51,6 @@ public class SmsUtil {
         }else {
             System.out.println(sendSmsResponse.getMessage());
         }
-        return random;
+        return String.valueOf(random);
     }
 }

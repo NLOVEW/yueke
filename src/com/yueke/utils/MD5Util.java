@@ -10,6 +10,7 @@ import java.security.NoSuchAlgorithmException;
  */
 public class MD5Util {
 	/**
+	 * 根据字符串进行MD5加密
 	 */
 	public static String md5(String plainText) {
 		byte[] secretBytes = null;

@@ -12,9 +12,21 @@ public class School implements Serializable {
      */
     private String sid;
     private String schoolName;
+    private String mobilePhone;
+    private String password;
     private Integer classCount;
     private Long personSum;
     private Long credit;
+
+    public void set(String sid, String schoolName, String mobilePhone, String password, Integer classCount, Long personSum, Long credit) {
+        this.sid = sid;
+        this.schoolName = schoolName;
+        this.mobilePhone = mobilePhone;
+        this.password = password;
+        this.classCount = classCount;
+        this.personSum = personSum;
+        this.credit = credit;
+    }
 
     public Long getCredit() {
         return credit;
@@ -50,6 +62,21 @@ public class School implements Serializable {
 
     public Long getPersonSum() {
         return personSum;
+    }
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
+
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setPersonSum(Long personSum) {

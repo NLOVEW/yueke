@@ -21,6 +21,17 @@ public class CourseOrder implements Serializable {
     private String message;
     private Integer score;
 
+    public void set(String couId, Course course, Parents parents, Date teachTime, Date time, Double price, String message, Integer score) {
+        this.couId = couId;
+        this.course = course;
+        this.parents = parents;
+        this.teachTime = teachTime;
+        this.time = time;
+        this.price = price;
+        this.message = message;
+        this.score = score;
+    }
+
     public String getCouId() {
         return couId;
     }

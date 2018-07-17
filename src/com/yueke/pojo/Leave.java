@@ -17,6 +17,14 @@ public class Leave implements Serializable {
     private Date leaveTime;
     private Date time;
 
+    public void set(String leid, Course course, Parents parents, Date leaveTime, Date time) {
+        this.leid = leid;
+        this.course = course;
+        this.parents = parents;
+        this.leaveTime = leaveTime;
+        this.time = time;
+    }
+
     public String getLeid() {
         return leid;
     }

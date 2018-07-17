@@ -18,6 +18,15 @@ public class HomeWork implements Serializable {
     private String comment;
     private Date time;
 
+    public void set(String hid, Course course, Parents parents, String message, String comment, Date time) {
+        this.hid = hid;
+        this.course = course;
+        this.parents = parents;
+        this.message = message;
+        this.comment = comment;
+        this.time = time;
+    }
+
     public String getHid() {
         return hid;
     }

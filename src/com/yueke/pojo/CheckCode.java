@@ -16,6 +16,13 @@ public class CheckCode implements Serializable {
     private String code;
     private Date time;
 
+    public void set(String chid, String mobilePhone, String code, Date time) {
+        this.chid = chid;
+        this.mobilePhone = mobilePhone;
+        this.code = code;
+        this.time = time;
+    }
+
     public Date getTime() {
         return time;
     }
