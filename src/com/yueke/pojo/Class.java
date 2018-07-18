@@ -23,13 +23,16 @@ public class Class implements Serializable {
     private Date endTime;
     private String course;
     private String grade;
+    private String message;
     private Double price;
+    private String address;
     private Integer personCount;//已有人数
     private Integer classSum;//可容纳人数
     private Integer score;
     private Integer credit;
 
-    public void set(String cid, School school, Teacher teacher, String city, String area, Date startTime, Date endTime, String course, String grade, Double price, Integer personCount, Integer classSum) {
+
+    public void set(String cid, School school, Teacher teacher, String city, String area, Date startTime, Date endTime, String course, String grade, String message, Double price, String address, Integer personCount, Integer classSum, Integer score, Integer credit) {
         this.cid = cid;
         this.school = school;
         this.teacher = teacher;
@@ -39,9 +42,29 @@ public class Class implements Serializable {
         this.endTime = endTime;
         this.course = course;
         this.grade = grade;
+        this.message = message;
         this.price = price;
+        this.address = address;
         this.personCount = personCount;
         this.classSum = classSum;
+        this.score = score;
+        this.credit = credit;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public Integer getClassSum() {
