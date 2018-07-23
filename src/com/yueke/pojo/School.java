@@ -1,6 +1,7 @@
 package com.yueke.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 学校
@@ -11,21 +12,41 @@ public class School implements Serializable {
      * sid(数据库id) schoolName classCount personSum credit
      */
     private String sid;
-    private String schoolName;
     private String mobilePhone;
     private String password;
+    private String schoolName;
+    private String message;
     private Integer classCount;
     private Long personSum;
     private Long credit;
+    private Date time;
 
-    public void set(String sid, String schoolName, String mobilePhone, String password, Integer classCount, Long personSum, Long credit) {
+    public void set(String sid, String mobilePhone, String password, String schoolName, String message, Integer classCount, Long personSum, Long credit, Date time) {
         this.sid = sid;
-        this.schoolName = schoolName;
         this.mobilePhone = mobilePhone;
         this.password = password;
+        this.schoolName = schoolName;
+        this.message = message;
         this.classCount = classCount;
         this.personSum = personSum;
         this.credit = credit;
+        this.time = time;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
     }
 
     public Long getCredit() {

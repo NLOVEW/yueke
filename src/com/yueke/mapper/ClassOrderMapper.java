@@ -25,8 +25,8 @@ public interface ClassOrderMapper {
             @Result(property = "clazz.cid",column = "cid"),
             @Result(property = "parents.pid",column = "pid"),
             @Result(property = "comment",column = "comment"),
-            @Result(property = "orderTime",column = "order_time"),
-            @Result(property = "commentTime",column = "comment_time"),
+            @Result(property = "orderTime",column = "orderTime"),
+            @Result(property = "commentTime",column = "commentTime"),
     })
     public List<ClassOrder> findByClass(@Param("cid") String cid);
 }

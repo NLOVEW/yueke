@@ -19,4 +19,7 @@ public interface LoginMapper {
      */
     @Select("select password from parents where mobilePhone = #{mobilePhone}")
     public String findPasswordOnParents(@Param("mobilePhone") String mobilePhone);
+
+    @Select("select password from school where mobilePhone = #{mobilePhone}")
+    public String findPasswordOnSchool(@Param("mobilePhone") String mobilePhone);
 }

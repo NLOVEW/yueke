@@ -16,14 +16,22 @@ public class LoginService{
 
     /**
      * 家长用户登录
-     * @param mobliePhone 用户手机号
+     * @param mobilePhone 用户手机号
      * @param password  用户密码
      * @return  密码比对是否正确
      */
-    public boolean parentsLogin(String mobliePhone, String password) {
+    public boolean parentsLogin(String mobilePhone, String password) {
         boolean flag = false;
-        if (loginMapper.findPasswordOnParents(mobliePhone).equals(password)){
+        if (loginMapper.findPasswordOnParents(mobilePhone).equals(password)){
            flag = true;
+        }
+        return flag;
+    }
+
+    public boolean schoolLogin(String mobilePhone, String password) {
+        boolean flag = false;
+        if (loginMapper.findPasswordOnSchool(mobilePhone).equals(password)){
+            flag = true;
         }
         return flag;
     }

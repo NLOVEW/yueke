@@ -16,7 +16,7 @@ public class Class implements Serializable {
      */
     private String cid;
     private School school;
-    private Teacher teacher;
+    private STeacher steacher;
     private String city;
     private String area;
     private Date startTime;
@@ -31,11 +31,10 @@ public class Class implements Serializable {
     private Integer score;
     private Integer credit;
 
-
-    public void set(String cid, School school, Teacher teacher, String city, String area, Date startTime, Date endTime, String course, String grade, String message, Double price, String address, Integer personCount, Integer classSum, Integer score, Integer credit) {
+    public void set(String cid, School school, STeacher steacher, String city, String area, Date startTime, Date endTime, String course, String grade, String message, Double price, String address, Integer personCount, Integer classSum, Integer score, Integer credit) {
         this.cid = cid;
         this.school = school;
-        this.teacher = teacher;
+        this.steacher = steacher;
         this.city = city;
         this.area = area;
         this.startTime = startTime;
@@ -49,6 +48,14 @@ public class Class implements Serializable {
         this.classSum = classSum;
         this.score = score;
         this.credit = credit;
+    }
+
+    public STeacher getSteacher() {
+        return steacher;
+    }
+
+    public void setSteacher(STeacher steacher) {
+        this.steacher = steacher;
     }
 
     public String getMessage() {
@@ -105,14 +112,6 @@ public class Class implements Serializable {
 
     public void setSchool(School school) {
         this.school = school;
-    }
-
-    public Teacher getTeacher() {
-        return teacher;
-    }
-
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
     }
 
     public String getArea() {

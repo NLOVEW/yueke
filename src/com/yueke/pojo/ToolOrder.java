@@ -6,22 +6,81 @@ import java.util.Date;
 /**
  * 道具购买订单
  */
-public class ToolOrder<T> implements Serializable {
+public class ToolOrder implements Serializable {
     /**
      * tlid Tool Object time price comment
      */
     private String tlId;
-    private T object;
+    private Integer type;
+    private String phone;
+    private Tool tool;
+    private String tmName;
     private Date time;
     private Double price;
+    private Integer number;
+    private Integer subNumber;
     private String comment;
 
-    public void set(String tlId, T object, Date time, Double price, String comment) {
+    public void set(String tlId, Integer type, String phone, Tool tool, String tmName, Date time, Double price, Integer number, Integer subNumber, String comment) {
         this.tlId = tlId;
-        this.object = object;
+        this.type = type;
+        this.phone = phone;
+        this.tool = tool;
+        this.tmName = tmName;
         this.time = time;
         this.price = price;
+        this.number = number;
+        this.subNumber = subNumber;
         this.comment = comment;
+    }
+
+    public String getTmName() {
+        return tmName;
+    }
+
+    public void setTmName(String tmName) {
+        this.tmName = tmName;
+    }
+
+    public Integer getType() {
+
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Tool getTool() {
+        return tool;
+    }
+
+    public void setTool(Tool tool) {
+        this.tool = tool;
+    }
+
+    public Integer getSubNumber() {
+        return subNumber;
+    }
+
+    public void setSubNumber(Integer subNumber) {
+        this.subNumber = subNumber;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 
     public String getTlId() {
@@ -32,13 +91,6 @@ public class ToolOrder<T> implements Serializable {
         this.tlId = tlId;
     }
 
-    public T getObject() {
-        return object;
-    }
-
-    public void setObject(T object) {
-        this.object = object;
-    }
 
     public Date getTime() {
         return time;

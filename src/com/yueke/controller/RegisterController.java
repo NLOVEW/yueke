@@ -3,6 +3,7 @@ package com.yueke.controller;
 import com.alibaba.fastjson.JSON;
 import com.yueke.pojo.Parents;
 import com.yueke.pojo.Result;
+import com.yueke.pojo.School;
 import com.yueke.service.RegisterService;
 import com.yueke.utils.IDUtil;
 import com.yueke.utils.MD5Util;
@@ -66,13 +67,26 @@ public class RegisterController {
      * @param password
      * @return 返回注册结果（error：注册未成功；success：注册成功）
      */
-    @RequestMapping(value = "/register/register/{mobilePhone}/{password}",method = RequestMethod.POST)
-    public String register(@PathVariable("mobilePhone") String mobilePhone,
-                           @PathVariable("password") String password){
+    @RequestMapping(value = "/register/registerParents",method = RequestMethod.POST)
+    public String registerParents(String mobilePhone, String password){
         Parents parents = new Parents();
         parents.set(IDUtil.getId(), mobilePhone, mobilePhone,
                 MD5Util.md5(password), 0, 0, new Date());
-        int flag = registerService.register(parents);
+        int flag = registerService.registerParents(parents);
+        if (flag == 1){
+            result.setCode("success");
+        }else{
+            result.setCode("error");
+        }
+        return JSON.toJSONString(result);
+    }
+
+    @RequestMapping(value = "/register/registerSchool",method = RequestMethod.POST)
+    public String registerSchool(String mobilePhone, String password){
+        School school = new School();
+        school.set(IDUtil.getId(), mobilePhone,MD5Util.md5(password), mobilePhone,"",
+                 0, 0L, 10L,new Date());
+        int flag = registerService.registerSchool(school);
         if (flag == 1){
             result.setCode("success");
         }else{

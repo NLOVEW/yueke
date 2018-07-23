@@ -1,6 +1,7 @@
 package com.yueke.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 教师类
@@ -22,8 +23,9 @@ public class Teacher implements Serializable {
     private Integer count;
     private Integer vip;
     private Integer level;
+    private Date time;
 
-    public void set(String tid, String mobilePhone, String userName, String password, String city, String area, Integer score, Long credit, Integer count, Integer vip, Integer level) {
+    public void set(String tid, String mobilePhone, String userName, String password, String city, String area, Integer score, Long credit, Integer count, Integer vip, Integer level, Date time) {
         this.tid = tid;
         this.mobilePhone = mobilePhone;
         this.userName = userName;
@@ -35,6 +37,15 @@ public class Teacher implements Serializable {
         this.count = count;
         this.vip = vip;
         this.level = level;
+        this.time = time;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
     }
 
     public Integer getScore() {

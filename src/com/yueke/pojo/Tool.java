@@ -12,19 +12,27 @@ public class Tool implements Serializable {
      * tid tName(名称) function(功能) level price time
      */
     private String toId;
-    private String tName;
-    private String function;
+    private ToolMenu toolMenu;
+    private Integer limit;
     private Integer level;
     private Double price;
     private Date time;
 
-    public void set(String toId, String tName, String function, Integer level, Double price, Date time) {
+    public void set(String toId, ToolMenu toolMenu, Integer limit, Integer level, Double price, Date time) {
         this.toId = toId;
-        this.tName = tName;
-        this.function = function;
+        this.toolMenu = toolMenu;
+        this.limit = limit;
         this.level = level;
         this.price = price;
         this.time = time;
+    }
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 
     public String getToId() {
@@ -35,28 +43,20 @@ public class Tool implements Serializable {
         this.toId = toId;
     }
 
-    public String gettName() {
-        return tName;
+    public ToolMenu getToolMenu() {
+        return toolMenu;
     }
 
-    public void settName(String tName) {
-        this.tName = tName;
+    public void setToolMenu(ToolMenu toolMenu) {
+        this.toolMenu = toolMenu;
     }
 
-    public String getFunction() {
-        return function;
+    public Integer getLimit() {
+        return limit;
     }
 
-    public void setFunction(String function) {
-        this.function = function;
-    }
-
-    public Integer getLevel() {
-        return level;
-    }
-
-    public void setLevel(Integer level) {
-        this.level = level;
+    public void setLimit(Integer limit) {
+        this.limit = limit;
     }
 
     public Double getPrice() {

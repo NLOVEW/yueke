@@ -3,6 +3,7 @@ package com.yueke.service;
 import com.yueke.mapper.RegisterMapper;
 import com.yueke.pojo.CheckCode;
 import com.yueke.pojo.Parents;
+import com.yueke.pojo.School;
 import com.yueke.utils.IDUtil;
 import com.yueke.utils.SmsUtil;
 import org.springframework.stereotype.Service;
@@ -63,14 +64,23 @@ public class RegisterService {
      * @param parents
      * @return 返回是否注册成功（保存数据库成功）
      */
-    public int register(Parents parents){
+    public int registerParents(Parents parents){
         int flag = 0;
-        registerMapper.insterParents(parents);
+        registerMapper.insertParents(parents);
         String pid = parents.getPid();
         if (pid != null){
             flag = 1;
         }
-        System.out.println("pid:"+pid);
+        return flag;
+    }
+
+    public int registerSchool(School school) {
+        int flag = 0;
+        registerMapper.insertSchool(school);
+        String pid = school.getSid();
+        if (pid != null){
+            flag = 1;
+        }
         return flag;
     }
 }

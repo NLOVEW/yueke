@@ -6,20 +6,37 @@ import java.util.Date;
 /**
  * 图片类
  * 用于上传用户头像
- * @param <T>
  * @author luck_nhb
  */
-public class Image<T> implements Serializable {
+public class Image implements Serializable {
     private String iId;
-    private T object;
+    private Integer type;
+    private String uid;
     private String path;
     private Date time;
 
-    public void set(String iId, T object, String path, Date time) {
+    public void set(String iId, Integer type, String uid, String path, Date time) {
         this.iId = iId;
-        this.object = object;
+        this.type = type;
+        this.uid = uid;
         this.path = path;
         this.time = time;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getiId() {
@@ -28,14 +45,6 @@ public class Image<T> implements Serializable {
 
     public void setiId(String iId) {
         this.iId = iId;
-    }
-
-    public T getObject() {
-        return object;
-    }
-
-    public void setObject(T object) {
-        this.object = object;
     }
 
     public String getPath() {

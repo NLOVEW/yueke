@@ -2,6 +2,7 @@ package com.yueke.mapper;
 
 import com.yueke.pojo.CheckCode;
 import com.yueke.pojo.Parents;
+import com.yueke.pojo.School;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
@@ -35,5 +36,9 @@ public interface RegisterMapper {
      */
     @Insert("insert into parents values(#{pid},#{mobilePhone},#{userName},#{password},#{vip},#{level},#{time})")
     @Options(useGeneratedKeys = false,keyProperty = "#{pid}")
-    public void insterParents(Parents parents);
+    public void insertParents(Parents parents);
+
+    @Insert("insert into school values(#{sid},#{mobilePhone},#{password},#{schoolName},#{classCount},#{personSum},#{credit},#{time})")
+    @Options(useGeneratedKeys = false,keyProperty = "#{sid}")
+    public void insertSchool(School school);
 }
